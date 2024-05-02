@@ -1,0 +1,5 @@
+// These variables need to be changed to whatever project you are working on
+// rootProject.name needs to be project name, include needs to be your project name with "EAR" added at the end
+// feel free to delete this comment whenever you are making this for your own web service.
+rootProject.name = 'RPAAmisysClaimLineService'
+include 'RPAAmisysClaimLineServiceEAR'

@@ -1,0 +1,64 @@
+/* This is your build script. It's very important! This is how we create the artifacts for the web service (the EAR and WAR file).
+	The EAR file is what gets deployed on to the servers. So this file is very important to understand. I highly recommend reading 
+	the official gradle documentation for an explanation. Important things of note are dependencies. The maven central repository 
+	will have most of the common jar files and libraries you will need or use. You will want to find that library in maven central
+	and copy the gradle DSL and add it to your dependencies section. There are already a few dependencies here that are for 
+	things like jax-rs, servlets, and Swagger core. For any local jar files, place them in the "libs" folder 
+	that's under your project root. That's where you'll see a few jars like "IsSharedUtilities"
+*/
+plugins {
+    id 'java'
+    id 'war'
+    id 'eclipse-wtp'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    implementation fileTree(dir: 'libs', include: '*.jar')
+  	implementation 'javax.ws.rs:javax.ws.rs-api:2.0'
+	implementation group: 'io.swagger.core.v3', name: 'swagger-jaxrs2', version: '2.1.13'
+  	implementation group: 'io.swagger.core.v3', name: 'swagger-jaxrs2-servlet-initializer-v2', version: '2.1.13'
+	implementation group: 'io.swagger.core.v3', name: 'swagger-integration', version: '2.1.13'
+	implementation group: 'io.swagger.core.v3', name: 'swagger-annotations', version: '2.1.13'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.18.0'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.18.0'
+	testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+	//testImplementation group: 'org.meanbean', name: 'meanbean', version: '2.0.3'
+}
+
+group = 'net.abcbs'
+description = 'RPAAmisysClaimLineService'
+sourceCompatibility = '1.8'
+war {
+	archiveName = 'RPAAmisysClaimLineService.war'
+    manifest {
+		from('src/main/application/META-INF/MANIFEST.MF')
+  	}
+    exclude '**/*.ear'
+}
+
+
+project(":RPAAmisysClaimLineServiceEAR") {
+	apply plugin: 'ear'
+	
+	dependencies {
+		deploy project(path:":", configuration:'archives') 
+	}
+	
+	ear {
+		appDirName = '../src/main/application/'
+		archiveName= 'RPAAmisysClaimLineServiceEAR.ear'
+		deploymentDescriptor {
+			webModule("RPAAmisysClaimLineService.war", "/RPAAmisysClaimLineService")
+	  	}
+	  	
+	  	manifest {
+	        from('../src/main/application/META-INF/MANIFEST.MF')
+  		} 
+	} 
+	
+}

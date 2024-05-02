@@ -1,0 +1,80 @@
+!SESSION 2022-09-28 10:14:51.437 -----------------------------------------------
+eclipse.buildId=unknown
+java.fullversion=JRE 1.8.0 IBM J9 2.8 Windows 10 amd64-64 Compressed References 20170209_336038 (JIT enabled, AOT enabled)
+J9VM - R28_20170209_0201_B336038
+JIT  - tr.r14.java.green_20170125_131456
+GC   - R28_20170209_0201_B336038_CMPRSS
+J9CL - 20170209_336038
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ibm.rational.rad.product.v96.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ibm.rational.rad.product.v96.ide
+
+!ENTRY org.eclipse.core.net 1 0 2022-09-28 10:16:12.689
+!MESSAGE System property http.proxyHost is not set but should be wsaproxy.bcbsar.net.
+
+!ENTRY org.eclipse.core.net 1 0 2022-09-28 10:16:12.692
+!MESSAGE System property http.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2022-09-28 10:16:13.137
+!MESSAGE System property https.proxyHost is not set but should be aalstapp02.
+
+!ENTRY org.eclipse.core.net 1 0 2022-09-28 10:16:13.143
+!MESSAGE System property https.proxyPort is not set but should be 8140.
+
+!ENTRY org.eclipse.core.net 1 0 2022-09-28 10:16:13.146
+!MESSAGE System property https.proxyHost is not set but should be aalstapp02.
+
+!ENTRY org.eclipse.core.net 1 0 2022-09-28 10:16:13.148
+!MESSAGE System property https.proxyPort is not set but should be 8140.
+
+!ENTRY org.eclipse.jface 2 0 2022-09-28 10:16:14.567
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-09-28 10:16:14.567
+!MESSAGE A conflict occurred for CTRL+SHIFT+F9:
+Binding(CTRL+SHIFT+F9,
+	ParameterizedCommand(Command(com.ibm.team.filesystem.ide.ui.command.checkin,Check-In,
+		Check-In,
+		Category(com.ibm.team.filesystem.ide.ui.category,Jazz Source Control,Jazz Source Control,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4ceed1b9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+F9,
+	ParameterizedCommand(Command(org.eclipse.mylyn.tasks.ui.command.deactivateAllTasks,Deactivate Task,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5127847a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-09-28 10:16:14.567
+!MESSAGE A conflict occurred for CTRL+SHIFT+F12:
+Binding(CTRL+SHIFT+F12,
+	ParameterizedCommand(Command(com.ibm.team.filesystem.ide.ui.command.accept,Accept,
+		Accept,
+		Category(com.ibm.team.filesystem.ide.ui.category,Jazz Source Control,Jazz Source Control,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@990e5db2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+F12,
+	ParameterizedCommand(Command(org.eclipse.mylyn.tasks.ui.command.searchForTask,Search Repository for Task,
+		,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a787570f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.ibm.etools.common.migration 4 0 2022-09-28 10:16:29.050
+!MESSAGE Extension: migration plug-in: com.ibm.etools.portlet.migration id= com.ibm.etools.portlet.migration.internal.UnresolvedRuntimeMigrationOperator defines a dependsOn for id: com.ibm.ws.ast.st.migration.internal.migrator.UnresolvedRuntimeMigrator which does not exist
+
+!ENTRY com.ibm.etools.common.migration 4 0 2022-09-28 10:16:29.054
+!MESSAGE migrator: com.ibm.etools.portlet.migration.internal.UnresolvedRuntimeMigrationOperation is disabled until the problem is corrected
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-09-28 10:16:29.654
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mfribeiro'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

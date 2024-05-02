@@ -1,0 +1,17 @@
+{
+    "resourcePackages": [
+        "net.abcbs.eae.jaxrs"
+    ],
+    "prettyPrint" : true,
+    "cacheTTL": 0,
+    "openAPI": {
+        "info": {
+            "version": "1.0",
+            "title": "RPAAmisysClaimLineService",
+            "description": "A RESTful web service that allows EAE team to retrieve claim info from Amisys",
+            "contact": {
+                "email": "mfribeiro@arkbluecross.com"
+            }
+        }
+    }
+}
